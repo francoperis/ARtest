@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR.js Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/ [email protected]/dist/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/ [email protected]/dist/aframe-ar.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs="sourceType: webcam; detectionMode: mono; patternRatio: 0.5;">
+        <a-marker preset="custom" type="pattern" url="marker.patt">
+            <a-entity gltf-model="./Everything_is_Fine_Dog.STL"></a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
